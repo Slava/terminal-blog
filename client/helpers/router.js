@@ -1,4 +1,4 @@
 Meteor.Router.add({
-	'/': 'home',
-	'/help': 'help'
+  '/': 'home',
+  '/help': 'help'
 });

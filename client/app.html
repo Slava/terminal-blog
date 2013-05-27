@@ -2,8 +2,10 @@
   <title>The world is changing, I stay geeky...</title>
 </head>
 <body>
-  {{> shell}}
-  {{> main}}
+  <div class="container">
+    {{> shell}}
+    {{> main}}
+  </div>
 </body>
 
 
@@ -15,10 +17,6 @@
 
 <template name="shell">
   <div id="shell"></div>
-</template>
-
-<template name="help">
-  help template is here!
 </template>
 
 <template name="home">

@@ -1,4 +1,38 @@
+.container {
+  width: 800px;
+  margin: 0 auto 0 auto;
+  padding: 20px;
+}
+
 #shell {
-	width: 600px;
-	height: 40px;
+  width: 400px;
+  margin: 0 auto 0 auto;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.main {
+  font-family: "ff-tisa-web-pro",Georgia,Cambria,"Times New Roman",Times,serif;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 1.45;
+}
+
+ul {
+  list-style-type: circle;
+  margin: 2em;
+}
+
+ul li {
+  margin-left: 2em;
+  padding-left: 0.7em;
+}
+
+a {
+  color: #aaa;
+  text-decoration: none;
+}
+
+[data-terminal] {
+  font-family: monospace;
 }

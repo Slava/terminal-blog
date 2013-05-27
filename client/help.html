@@ -1,0 +1,11 @@
+<template name="help">
+  <ul>
+    {{#each commandsDescriptions}}
+      {{> help-item}}
+    {{/each}}
+  </ul>
+</template>
+
+<template name="help-item">
+  <li> <a href="#" data-terminal="{{command}}">{{command}}</a> &nbsp;-&nbsp; {{description}}</li>
+</template>

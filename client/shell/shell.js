@@ -17,7 +17,20 @@ Meteor.setTimeout(function () {
   terminal = $('#shell').terminal(commands, {
     prompt: '> ',
     name: 'shell',
-    greetings: '',
-    height: 40
+    greetings: 'connected to devblog.me',
+    height: 65,
+    tabcompletion: true
   });
+}, 100);
+
+typeAndExecute = function (command) {
+  if (!terminal)
+    return;
+
+  // Simulate typing and entering
+  terminal.exec(command, false);
+};
+
+$(document).on('click', '[data-terminal]', function (e) {
+  typeAndExecute($(this).attr('data-terminal'));
 });
