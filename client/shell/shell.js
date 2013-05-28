@@ -28,9 +28,11 @@ typeAndExecute = function (command) {
     return;
 
   // Simulate typing and entering
+  terminal.resume();
   terminal.exec(command, false);
 };
 
 $(document).on('click', '[data-terminal]', function (e) {
   typeAndExecute($(this).attr('data-terminal'));
+  e.preventDefault();
 });
