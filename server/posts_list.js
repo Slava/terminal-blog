@@ -10,6 +10,12 @@ var postsList = [
     title: 'The second one',
     date: new Date('Fri May 24 2013 21:12:26 GMT-0700 (PDT)'),
     tags: ['test']
+  },
+  {
+    id: 'helloworld',
+    title: 'Hello world post',
+    date: new Date('Fri May 31 2013 23:06:00 GMT-0700 (PDT)'),
+    tags: ['meta']
   }
 ];
 

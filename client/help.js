@@ -7,6 +7,11 @@ Template.help.helpers({
     {
       command: 'home',
       description: 'show homepage'
+    },
+    {
+      command: 'show',
+      args: '<postId>',
+      description: 'show particular blog-post'
     }
   ]
 });

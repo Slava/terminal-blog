@@ -1,6 +1,11 @@
 <template name="post">
-  Post template
   {{#with currentPost}}
+    <h1 class="post-title">{{title}}</h1>
   {{/with}}
+
   {{{postBody}}}
+
+  {{#with currentPost}}
+    <div class="dateline">{{prettyDate date}}</div>
+  {{/with}}
 </template>
