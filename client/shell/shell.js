@@ -16,14 +16,22 @@ _.each(['home'], function (command) {
 
 _.each(['show', 'cat'], function (command) {
   commands[command] = function (postId) {
+    if (!postId) postId = 'helloworld';
     this.echo('showing contents of ' + postId + '...');
     this.echo('rendering ' + posts.findOne({ id: postId }).title);
     Meteor.Router.to('/p/' + postId);
   };
 });
 
-Meteor.setTimeout(function () {
-  // Create global terminal object
+// Create global terminal object
+var termTimeOut = 50;
+var termCreate = function () {
+  if (!$('#shell').length) {
+    termTimeOut *= 2;
+    Meteor.setTimeout(termCreate, termTimeOut);
+    return;
+  }
+
   terminal = $('#shell').terminal(commands, {
     prompt: '> ',
     name: 'shell',
@@ -31,7 +39,9 @@ Meteor.setTimeout(function () {
     height: 65,
     tabcompletion: true
   });
-}, 100);
+};
+
+termCreate();
 
 typeAndExecute = function (command) {
   if (!terminal)
