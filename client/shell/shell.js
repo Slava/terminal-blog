@@ -2,13 +2,23 @@ var commands = {};
 
 _.each(['?', 'help', 'man', 'wtf'], function (command) {
   commands[command] = function () {
+    this.echo('showing help...');
     Meteor.Router.to('/help');
   };
 });
 
 _.each(['home'], function (command) {
   commands[command] = function () {
+    this.echo('going home...');
     Meteor.Router.to('/');
+  };
+});
+
+_.each(['show', 'cat'], function (command) {
+  commands[command] = function (postId) {
+    this.echo('showing contents of ' + postId + '...');
+    this.echo('rendering ' + posts.findOne({ id: postId }).title);
+    Meteor.Router.to('/p/' + postId);
   };
 });
 
