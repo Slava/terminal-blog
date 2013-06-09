@@ -1,5 +1,6 @@
 @import "colors.lessimport";
 
+// Containers //
 .container {
   width: 800px;
   margin: 0 auto 0 auto;
@@ -21,6 +22,7 @@
   line-height: 1.45;
 }
 
+// Specifics //
 ul {
   list-style-type: circle;
   margin: 2em;
@@ -34,6 +36,12 @@ ul {
 a {
   color: @medium;
   text-decoration: none;
+  word-spacing: 0.01em;
+  margin-left: 0.3em;
+
+  &:hover, &:focus {
+    border-bottom: 1px dotted;
+  }
 }
 
 // Special internal links have data-terminal attr with command
