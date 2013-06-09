@@ -1,3 +1,5 @@
+@import "colors.lessimport";
+
 .container {
   width: 800px;
   margin: 0 auto 0 auto;
@@ -12,27 +14,30 @@
 }
 
 .main {
-  font-family: "ff-tisa-web-pro",Georgia,Cambria,"Times New Roman",Times,serif;
+  font-family: Georgia,Cambria,"Times New Roman",Times,serif;
   font-weight: 400;
   font-size: 22px;
+  color: @text;
   line-height: 1.45;
 }
 
 ul {
   list-style-type: circle;
   margin: 2em;
-}
 
-ul li {
-  margin-left: 2em;
-  padding-left: 0.7em;
+  li {
+    margin-left: 2em;
+    padding-left: 0.7em;
+  }
 }
 
 a {
-  color: #aaa;
+  color: @medium;
   text-decoration: none;
 }
 
+// Special internal links have data-terminal attr with command
 [data-terminal] {
+  color: @internal;
   font-family: monospace;
 }
