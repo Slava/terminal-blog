@@ -45,7 +45,6 @@ a {
   color: @medium;
   text-decoration: none;
   word-spacing: 0.01em;
-  margin-left: 0.3em;
 
   &:hover, &:focus {
     border-bottom: 1px dotted;
@@ -60,10 +59,22 @@ a {
 
 
 // Headings
-h1, h2 {
+h1, h2, h3 {
   color: @heavy;
   font-family: @heading-font;
+  margin-bottom: -10px;
+}
+
+h1 {
   font-size: 2.5em;
   font-weight: 700;
 }
 
+h2 {
+  font-size: 2.0em;
+  font-weight: 400;
+}
+
+h3 {
+  font-size: 1.5em;
+}
