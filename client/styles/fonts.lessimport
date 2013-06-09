@@ -1,0 +1,4 @@
+@import url(http://fonts.googleapis.com/css?family=Droid+Sans:400,700|PT+Sans:400,700);
+
+@heading-font: "PT Sans", sans-serif;
+@font: "Droid Sans", sans-serif;

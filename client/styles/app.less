@@ -1,6 +1,11 @@
 @import "colors.lessimport";
+@import "fonts.lessimport";
 
 // Containers //
+*::selection {
+  background: @verylight;
+}
+
 .container {
   width: 800px;
   margin: 0 auto 0 auto;
@@ -15,7 +20,7 @@
 }
 
 .main {
-  font-family: Georgia,Cambria,"Times New Roman",Times,serif;
+  font-family: @font;
   font-weight: 400;
   font-size: 22px;
   color: @text;
@@ -23,6 +28,7 @@
 }
 
 // Specifics //
+// Bullet lists
 ul {
   list-style-type: circle;
   margin: 2em;
@@ -33,6 +39,8 @@ ul {
   }
 }
 
+
+// Links
 a {
   color: @medium;
   text-decoration: none;
@@ -49,3 +57,13 @@ a {
   color: @internal;
   font-family: monospace;
 }
+
+
+// Headings
+h1, h2 {
+  color: @heavy;
+  font-family: @heading-font;
+  font-size: 2.5em;
+  font-weight: 700;
+}
+

@@ -1,6 +1,7 @@
 @heavy: #5E9D43;
 @medium: #83C567;
 @light: #AEDD9A;
+@verylight: #D3E8CA;
 @internal: #BFBFBF;
 @text: Black;
 @background: White;
