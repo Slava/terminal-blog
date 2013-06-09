@@ -1,4 +1,9 @@
 <template name="help">
+  <h1>Help</h1>
+  <p>
+    You can use listed commands in the shell above. Alternatively you can click
+    them.
+  </p>
   <ul>
     {{#each commandsDescriptions}}
       {{> help-item}}
@@ -8,5 +13,5 @@
 
 <template name="help-item">
   <li> <a href="#" data-terminal="{{command}}">{{command}} {{args}}</a>
-  	&nbsp;-&nbsp; {{description}}</li>
+    &nbsp;-&nbsp; {{description}}</li>
 </template>
