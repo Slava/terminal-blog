@@ -11,13 +11,11 @@ Those who are lazy can look it up in Wikipedia.
 
 Spoiler from video: javascript version of Y Combinator looks like this:
 
-```javascript
-y = function(f) {
-    return function(g) { return function(n) { return f(g(g))(n) } } (
-       function(g) { return function(n) { return f(g(g))(n) } }
-    )
-}
-```
+    y = function(f) {
+        return function(g) { return function(n) { return f(g(g))(n) } } (
+           function(g) { return function(n) { return f(g(g))(n) } }
+        )
+    }
 
 So as far as I got it: Y combinator is higher order function that gets function improver and produces infinitively better function applying improver. Now we understand the meaning of Paul Graham's startup funding company, it takes company and makes it infinitively better and bigger, at least it trys to.
 
