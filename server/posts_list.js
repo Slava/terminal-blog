@@ -54,6 +54,12 @@ var postsList = [
     tags: []
   },
   {
+    id: 'automata-revelation',
+    title: 'Pushdown Automata Revelation',
+    date: new Date(2013,5,7),
+    tags: []
+  },
+  {
     id: 'dont-go-back-to-school',
     title:'Dont go back to school',
     date: new Date(2013,5,25),
