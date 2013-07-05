@@ -9,3 +9,9 @@ Template.post.postBody = function () {
 Template.post.prettyDate = function (date) {
 	return [date.getDate(), date.getMonth()].join('/');
 };
+
+Template.post.rendered = function () {
+  $("code").addClass("language-javascript");
+  Prism.highlightAll();
+};
+
