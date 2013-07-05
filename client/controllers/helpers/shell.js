@@ -53,6 +53,10 @@ typeAndExecute = function (command) {
 };
 
 $(document).on('click', '[data-terminal]', function (e) {
+  // click with modifier? let someone else deal with this shit
+  if (e.ctrlKey || e.shiftKey || e.metaKey) 
+    return true; 
+
   typeAndExecute($(this).attr('data-terminal'));
   e.preventDefault();
 });
