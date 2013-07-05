@@ -68,3 +68,4 @@ posts.remove({});
 _.each(postsList, function (post) {
   posts.insert(post);
 });
+
