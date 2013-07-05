@@ -7,7 +7,7 @@ Template.post.postBody = function () {
 };
 
 Template.post.prettyDate = function (date) {
-	return [date.getDate(), date.getMonth()].join('/');
+	return [date.getDate(), date.getMonth() + 1].join('/');
 };
 
 Template.post.rendered = function () {
