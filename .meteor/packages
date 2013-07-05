@@ -8,6 +8,6 @@ insecure
 preserve-inputs
 jquery
 underscore
-router
 showdown
 less
+router
