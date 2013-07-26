@@ -73,11 +73,11 @@ var postsList = [
   }
 ];
 
-posts = new Meteor.Collection('posts');
+Posts = new Meteor.Collection('posts');
 
-posts.remove({});
+Posts.remove({});
 
 _.each(postsList, function (post) {
-  posts.insert(post);
+  Posts.insert(post);
 });
 

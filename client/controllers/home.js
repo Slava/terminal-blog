@@ -1,5 +1,5 @@
-posts = new Meteor.Collection('posts');
+Posts = new Meteor.Collection('posts');
 
 Template.home.posts = function () {
-	return posts.find({}, { sort: { date: -1 } });
+	return Posts.find({}, { sort: { date: -1 } });
 };

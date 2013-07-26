@@ -1,5 +1,5 @@
 Template.post.currentPost = function () {
-	return posts.findOne({id: Session.get('currentPostId')});
+	return Posts.findOne({id: Session.get('currentPostId')});
 };
 
 Template.post.postBody = function () {
