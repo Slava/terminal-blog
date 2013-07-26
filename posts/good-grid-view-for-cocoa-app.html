@@ -17,27 +17,25 @@ Issue you can meet after implementing fency cell layer: renaming of title in `OE
 
 Another issue I ran into was the fact that grid view reuses cell instances. `- (OEGridViewCell *)gridView:cellForItemAtIndex:` should be implemented in the way similar to this:
 
-```objectivec
-- (OEGridViewCell *)gridView:(OEGridView *)gridView cellForItemAtIndex:(NSUInteger)index
-{
-    // Maybe cell on such position already exists?
-    MYCustomGridViewCell *item = (MYCustomGridViewCell *)[gridView cellForItemAtIndex:index makeIfNecessary:NO];
+    - (OEGridViewCell *)gridView:(OEGridView *)gridView cellForItemAtIndex:(NSUInteger)index
+    {
+        // Maybe cell on such position already exists?
+        MYCustomGridViewCell *item = (MYCustomGridViewCell *)[gridView cellForItemAtIndex:index makeIfNecessary:NO];
 
-    // If not, maybe there are cell instance we can reuse
-    if (!item)
-        item = (MYCustomGridViewCell *)[gridView dequeueReusableCell];
-        
-    // OK, create new one
-    if (!item)
-        item = [[MYCustomGridViewCell alloc] init];
-        
-    // Set the binding
-    id object = [self.contents objectAtIndex:index];
-    item.objectBinding = object;
+        // If not, maybe there are cell instance we can reuse
+        if (!item)
+            item = (MYCustomGridViewCell *)[gridView dequeueReusableCell];
+            
+        // OK, create new one
+        if (!item)
+            item = [[MYCustomGridViewCell alloc] init];
+            
+        // Set the binding
+        id object = [self.contents objectAtIndex:index];
+        item.objectBinding = object;
 
-    return item;
-}
-```
+        return item;
+    }
 
 So you reuse maximum of cells you can. And do not forget to override the `- (void)prepareForReuse` method. The issue I had with this method was quite funny. In this preparation method I was preparing the cell in very hard way: clearing all layers and properties. But did not update the layers if the new binding object was the same object it was binded to before.
 
