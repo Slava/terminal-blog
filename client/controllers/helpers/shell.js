@@ -18,7 +18,7 @@ _.each(['show', 'cat'], function (command) {
   commands[command] = function (postId) {
     if (!postId) postId = 'helloworld';
     this.echo('showing contents of ' + postId + '...');
-    this.echo('rendering ' + posts.findOne({ id: postId }).title);
+    this.echo('rendering ' + Posts.findOne({ id: postId }).title);
     Meteor.Router.to('/p/' + postId);
   };
 });
